@@ -1,0 +1,4 @@
+.contenedor-info {
+    display: flex;
+    flex-direction: row;
+}
