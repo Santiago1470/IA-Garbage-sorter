@@ -1,4 +1,77 @@
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+.contenedor-principal {
+    text-align: center;
+}
+
+.contenedor-titulo {
+    margin: 15px 0px;
+}
+
 .contenedor-info {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.contenedor-color {
+    /* flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    min-width: 300px; */
+    width: 400px;
+    min-width: 300px;
+    padding: 10px;
+    border: 2px solid rgb(108, 108, 108);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s all;
+    overflow: hidden;
+}
+
+.contenedor-color:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 18px rgb(85, 85, 85);
+}
+
+.contenedor-color .card-body ul {
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 0px;
+    /* text-align: left; */
+}
+
+.contenedor-color img {
+    height: 250px;
+}
+
+.contenedor-verde {
+    background-color: rgb(0, 138, 0);
+}
+
+.contenedor-negro {
+    background-color: rgb(98, 98, 98);
+}
+
+.contenedor-rojo {
+    background-color: rgb(220, 33, 33);
+}
+
+.btn {
+    border: 2px solid rgb(97, 97, 97);
+    box-shadow: 0px 4px 8px rgb(77, 77, 77);
+    transition: transform 10s all;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 2px rgb(85, 85, 85);
 }
