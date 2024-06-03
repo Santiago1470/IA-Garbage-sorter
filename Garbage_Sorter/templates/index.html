@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de basura inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+</head>
+
+<body>
+    <section class="contenedor-principal">
+        <div class="contenedor-titulo">
+            <h1>¡Bienvenidos al Clasificador de basura con IA!</h1>
+        </div>
+        <div class="contenedor-info">
+            <div class="card mb-3 contenedor-color contenedor-verde" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Residuos aprovechables orgánicos</h5>
+                            <ul>
+                                <li>Restos de comida</li>
+                                <li>Desechos organicos</li>
+                            </ul>
+                            <!-- <p class="card-text">Restos de comida <br /> Desechos organicos</p> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', path='imagenes/caneca-verde.png') }}" class="img-fluid rounded-start" alt="Caneca verde">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card mb-3 contenedor-color contenedor-blanco" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', path='imagenes/caneca-blanca.png') }}" class="img-fluid rounded-start" alt="Caneca blanca">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Residuos aprovechables</h5>
+                            <ul>
+                                <li>Plástico</li>
+                                <li>Cartón</li>
+                                <li>Vidrio</li>
+                                <li>Papel</li>
+                                <li>Metales</li>
+                            </ul>
+                            <!-- <p class="card-text">Restos de comida <br /> Desechos organicos</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 contenedor-color contenedor-negro" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', path='imagenes/caneca-negra.png') }}" class="img-fluid rounded-start" alt="Caneca negra">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Residuos ordinarios</h5>
+                            <ul>
+                                <li>Papel higiénico</li>
+                                <li>Servilletas</li>
+                                <li>Papeles y cartones con restos de comidas</li>
+                                <li>Papeles metalizados</li>
+                            </ul>
+                            <!-- <p class="card-text">Restos de comida <br /> Desechos organicos</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 contenedor-color contenedor-rojo" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', path='imagenes/caneca-roja.png') }}" class="img-fluid rounded-start" alt="Caneca roja">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Residuos Peligrosos</h5>
+                            <ul>
+                                <li>Residuos con riesgo biológico o infeccioso</li>
+                                <li>Residuos radioactivos</li>
+                                <li>Residuos corrosivos, reactivos, explosivos, tóxicos o inflamables</li>
+                            </ul>
+                            <!-- <p class="card-text">Restos de comida <br /> Desechos organicos</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="contenedor-color contenedor-verde">
+                <div>
+                    <h3>Residuos aprovechables orgánicos</h3>
+                    <ul>
+                        <li>Restos de comida</li>
+                        <li>Desechos organicos</li>
+                    </ul>
+                </div>
+                <img src="imagenes/caneca-verde.png" alt="Caneca verde">
+            </div>
+            <div class="contenedor-color contenedor-blanco">
+                <div>
+                    <h3>Residuos aprovechables</h3>
+                    <ul>
+                        <li>Plástico</li>
+                        <li>Cartón</li>
+                        <li>Vidrio</li>
+                        <li>Papel</li>
+                        <li>Metales</li>
+                    </ul>
+                </div>
+                <img src="imagenes/caneca-blanca.png" alt="Caneca blanca">
+            </div>
+            <div class="contenedor-color contenedor-negro">
+                <div>
+                    <h3>Residuos ordinarios</h3>
+                    <ul>
+                        <li>Papel higiénico</li>
+                        <li>Servilletas</li>
+                        <li>Papeles y cartones con restos de comidas</li>
+                        <li>Papeles metalizados</li>
+                    </ul>
+                </div>
+                <img src="imagenes/caneca-negra.png" alt="Caneca negra">
+            </div>
+            <div class="contenedor-color contenedor-rojo">
+                <div>
+                    <h3>Residuos Peligrosos</h3>
+                    <ul>
+                        <li>Residuos con riesgo biológico o infeccioso</li>
+                        <li>Residuos radioactivos</li>
+                        <li>Residuos corrosivos, reactivos, explosivos, tóxicos o inflamables</li>
+                    </ul>
+                </div>
+                <img src="imagenes/caneca-roja.png" alt="Caneca roja">
+            </div> -->
+        </div>
+        <div class="contenedor-botones">
+            <a href="{{ url_for('templates', path='video.html') }}"><input id="btnIniciar" class="btn btn-secondary" type="button" value="INICIAR"></a>
+        </div>
+    </section>
+    <script src="{{ url_for('static', path='js/index.js') }}"></script>
+</body>
+
+</html>
