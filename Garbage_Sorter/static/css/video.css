@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+.seccion-titulos {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-titulos-texto{
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor-botones {
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.btn {
+    border: 2px solid rgb(97, 97, 97);
+    box-shadow: 0px 4px 8px rgb(77, 77, 77);
+    transition: transform 10s all;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 2px rgb(85, 85, 85);
+}
+
+.contendor-camara {
+    text-align: center;
+}
+
+section .contenedor-texto {
+    width: 100%;
+    text-align: center;
+}
